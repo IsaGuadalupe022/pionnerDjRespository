@@ -8,85 +8,129 @@
     <link rel="stylesheet" href="styles/styles.css">
     <title>Pionner Store</title>
 </head>
-<body>
-    <!-- First version from "code together v1.0" -->
-    <header>
-        <i><img src="img/Menu-Icon.png" alt="Icon Menu"></i>
-        <i><img src="img/pionner-logo.jpg" alt="Pionner Logo"></i>
-        <i><img src="img/Cart-Icon.png" alt="Cart Icon"></i>
+<body class="grid-container">
+    <!-- Adding "BEM" nomenclature to index v2.0 -->
+    <header class="header">
+        <i class="header__icon"><img src="img/Menu-Icon.png" class="header__button header__button--photo" alt="Icon Menu"></i>
+        <i class="header__icon"><img src="img/pionner-logo.jpg" class="header__button header__button--photo" alt="Pionner Logo"></i>
+        <i class="header__icon"><img src="img/Cart-Icon.png" class="header__button header__button--photo" alt="Cart Icon"></i>
     </header>
 
-    <main>
-        <section class="banner">
-            <h2>Controladores</h2>
-            <p>Conoce nuestros modelos</p>
+    <main class="main">
+        <section class="main__banner">
+            <h2 class="main__sectitle main__sectitle--banner">Controladores</h2>
+            <p class="main__txtbanner">Conoce nuestros modelos</p>
         </section>
 
-        <section class="controllers">
-            <article>
-                <img src="img/pionner-DDJ-FLX2.jpg" alt="Pioneer DJ AlphaTheta DDJ-FLX2">
-                <h3>AlphaTheta DDJ-FLX2</h3>
-                <p>$ 179</p>
-            </article>
-
-            <article>
-                <img src="img/pionner-DDJ-GRV6.jpg" alt="Pioneer DJ AlphaTheta DDJ-GRV6">
-                <h3>AlphaTheta DDJ-GRV6</h3>
-                <p>$ 829</p>
-            </article>
-
-            <article>
-                <img src="img/pionner-DDJ-FLX4.jpg" alt="DDJ-FLX4">
-                <h3>DDJ-FLX4</h3>
-                <p>$ 299</p>
-            </article>
-
-            <article>
-                <img src="img/pionner-DDJ-FLX2.jpg" alt="Pioneer DJ AlphaTheta DDJ-FLX2">
-                <h3>AlphaTheta DDJ-FLX2</h3>
-                <p>$ 179</p>
-            </article>
-
-            <article>
-                <img src="img/pionner-DDJ-GRV6.jpg" alt="Pioneer DJ AlphaTheta DDJ-GRV6">
-                <h3>AlphaTheta DDJ-GRV6</h3>
-                <p>$ 829</p>
-            </article>
-
-            <article>
-                <img src="img/pionner-DDJ-FLX4.jpg" alt="DDJ-FLX4">
-                <h3>DDJ-FLX4</h3>
-                <p>$ 299</p>
-            </article>
-
-            <article>
-                <img src="img/pionner-DDJ-FLX2.jpg" alt="Pioneer DJ AlphaTheta DDJ-FLX2">
-                <h3>AlphaTheta DDJ-FLX2</h3>
-                <p>$ 179</p>
-            </article>
-
-            <article>
-                <img src="img/pionner-DDJ-GRV6.jpg" alt="Pioneer DJ AlphaTheta DDJ-GRV6">
-                <h3>AlphaTheta DDJ-GRV6</h3>
-                <p>$ 829</p>
-            </article>
-
-            <article>
-                <img src="img/pionner-DDJ-FLX4.jpg" alt="DDJ-FLX4">
-                <h3>DDJ-FLX4</h3>
-                <p>$ 299</p>
-            </article>
+        <section class="main__txtcont">
+            <h1 class="main__title">Algunos de nuestros equipos</h1>
         </section>
 
-        <section class="sh-cart">
-            <h2>Mi Carrito</h2>
-            <div>
-                <img src="img/pionner-DDJ-FLX2.jpg" alt="">
-                <p>$</p>
-                <p>Controlador</p>
-                <i><img src="img/Delete-Icon.png" alt="Delete Icon" class="delete-icon"></i>
+        <div class="main__controllers">
+            <!-- Responsive Cards -->
+            <div class="main__card">
+            <div class="main__product main__product--photo">
+                <img src="img/pionner-DDJ-FLX2.jpg" alt="Pioneer DJ AlphaTheta DDJ-FLX2">
             </div>
-        </section>
+                <div class="main__crd-content">
+                    <h3 class="main__artcl-name">AlphaTheta DDJ-FLX2</h3>
+                    <p class="main__artcl-desc">$ 179</p>
+                </div>
+            </div>
+
+            <div class="main__card">
+            <div class="main__product main__product--photo">
+                <img src="img/pionner-DDJ-GRV6.jpg" alt="Pioneer DJ AlphaTheta DDJ-GRV6">
+            </div>
+                <div class="main__crd-content">
+                    <h3 class="main__artcl-name">AlphaTheta DDJ-GRV6</h3>
+                    <p class="main__artcl-desc">$ 829</p>
+                </div>
+            </div>
+
+            <div class="main__card">
+            <div class="main__product main__product--photo">
+                <img src="img/pionner-DDJ-FLX4.jpg" alt="Pioneer DJ DDJ-FLX4">
+            </div>
+                <div class="main__crd-content">
+                    <h3 class="main__artcl-name">DDJ-FLX4</h3>
+                    <p class="main__artcl-desc">$ 829</p>
+                </div>
+            </div>
+
+                <div class="main__card">
+            <div class="main__product main__product--photo">
+                <img src="img/pionner-DDJ-FLX2.jpg" alt="Pioneer DJ AlphaTheta DDJ-FLX2">
+            </div>
+                <div class="main__crd-content">
+                    <h3 class="main__artcl-name">AlphaTheta DDJ-FLX2</h3>
+                    <p class="main__artcl-desc">$ 179</p>
+                </div>
+            </div>
+
+            <div class="main__card">
+            <div class="main__product main__product--photo">
+                <img src="img/pionner-DDJ-GRV6.jpg" alt="Pioneer DJ AlphaTheta DDJ-GRV6">
+            </div>
+                <div class="main__crd-content">
+                    <h3 class="main__artcl-name">AlphaTheta DDJ-GRV6</h3>
+                    <p class="main__artcl-desc">$ 829</p>
+                </div>
+            </div>
+
+            <div class="main__card">
+            <div class="main__product main__product--photo">
+                <img src="img/pionner-DDJ-FLX4.jpg" alt="Pioneer DJ DDJ-FLX4">
+            </div>
+                <div class="main__crd-content">
+                    <h3 class="main__artcl-name">DDJ-FLX4</h3>
+                    <p class="main__artcl-desc">$ 829</p>
+                </div>
+            </div>
+
+            <div class="main__card">
+            <div class="main__product main__product--photo">
+                <img src="img/pionner-DDJ-FLX2.jpg" alt="Pioneer DJ AlphaTheta DDJ-FLX2">
+            </div>
+                <div class="main__crd-content">
+                    <h3 class="main__artcl-name">AlphaTheta DDJ-FLX2</h3>
+                    <p class="main__artcl-desc">$ 179</p>
+                </div>
+            </div>
+
+            <div class="main__card">
+            <div class="main__product main__product--photo">
+                <img src="img/pionner-DDJ-GRV6.jpg" alt="Pioneer DJ AlphaTheta DDJ-GRV6">
+            </div>
+                <div class="main__crd-content">
+                    <h3 class="main__artcl-name">AlphaTheta DDJ-GRV6</h3>
+                    <p class="main__artcl-desc">$ 829</p>
+                </div>
+            </div>
+
+            <div class="main__card">
+            <div class="main__product main__product--photo">
+                <img src="img/pionner-DDJ-FLX4.jpg" alt="Pioneer DJ DDJ-FLX4">
+            </div>
+                <div class="main__crd-content">
+                    <h3 class="main__artcl-name">DDJ-FLX4</h3>
+                    <p class="main__artcl-desc">$ 829</p>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <footer class="footer">
+        <nav class="footer__nav">
+            <div class="footer__container">
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link"></a>Correo electronico</li>
+                    <li class="footer__item"><a href="#" class="footer__link"></a>Llamanos</li>
+                    <li class="footer__item"><a href="#" class="footer__link"></a>Chat</li>
+                    <li class="footer__item"><a href="#" class="footer__link"></a>Twitter/X</li>
+                </ul>
+            </div>
+        </nav>
+    </footer>
 </body>
 </html>
