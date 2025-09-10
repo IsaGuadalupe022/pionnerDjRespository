@@ -1,4 +1,4 @@
-/* -- Using advanced Sass techniques -- */
+/* -- Including responsive devices to stylesheet 4.0 -- */
 /* -- Generic Colors -- */
 $white: #fff;
 $alice: #81ffff;
@@ -50,7 +50,8 @@ $width: 100%;
             display: inline-block;
 
             .header__button--photo{
-                width: 80px;
+                /* -- Responsive icons -- */ 
+                width: clamp(3rem, 1.2rem + 6.4vw, 6rem);
             }
         }
     }
@@ -74,24 +75,26 @@ $width: 100%;
                 color: $alice;
                 width: $width;
                 font-weight: 600;
-                font-size: 30px;
+                /* -- Responsive title font -- */
+                font-size: clamp(1rem, 0.4rem + 2.133vw, 2rem);
                 margin: 10px;
             }
 
             .main__txtbanner{
-                color: $alice;
-                width: 350px;
-                margin: 0 auto;
-                font-size: 25px;
+                @extend .main__sectitle--banner;
+                /* -- Responsive banner content -- */
+                font-size: clamp(0.9rem, 0.42rem + 1.707vw, 1.7rem);
+                font-weight: 300;
             }
         }
 
-        &__title{
+        .main__title{
             color: #000000;
             width: $width;
             margin: 1rem;
             font-weight: 600;
-            font-size: 2rem;
+            /* -- Responsive main title -- */
+            font-size: clamp(0.9rem, 0.24rem + 2.347vw, 2rem);
 
             display: $flexItem;
             @include genericFlex(center, center, center)
@@ -130,7 +133,8 @@ $width: 100%;
 
             .main__artcl-name, .main__artcl-desc{
                 color: $void;
-                font-size: .9rem;
+                /* -- Responsive card content -- */
+                font-size: clamp(0.7rem, 0.52rem + 0.64vw, 1rem);
                 font-weight: bold;
                 margin-bottom: 10px;
             }
@@ -144,6 +148,8 @@ $width: 100%;
 
         &__list{
             color: $white;
+            /* -- Responsive footer -- */
+            font-size: clamp(0.7rem, 0.52rem + 0.64vw, 1rem);
             display: $flexItem;
             flex-direction: row;
 
@@ -159,6 +165,18 @@ $width: 100%;
                 margin-left: 2rem;
                 margin-right: 2rem;
             }
+        }
+    }
+
+    /* -- Control of mobile devices -- */
+    @media(max-width: 470px){
+        .main__banner{
+            height: 100px;
+        }
+
+        .footer__list{
+            flex-direction: column;
+            margin: 0;
         }
     }
 }
