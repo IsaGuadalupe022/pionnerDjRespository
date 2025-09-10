@@ -1,0 +1,164 @@
+/* -- Using advanced Sass techniques -- */
+/* -- Generic Colors -- */
+$white: #fff;
+$alice: #81ffff;
+$void: #333;
+
+/* -- Generic Boxes -- */
+$flexItem: flex;
+$width: 100%;
+
+/* -- Generic Flex -- */
+@mixin genericFlex($txtali, $align, $just){
+    text-align: $txtali;
+    align-items: $align;
+    justify-content: $just;
+}
+
+/* -- General Reboot -- */
+*{
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* -- Including Nesting -- */
+.grid-container{
+    width: $width;
+    font-size: 15px;
+    font-weight: 300;
+    color: #999;
+    font-family: 'Lexend', Arial, Helvetica, sans-serif;
+
+    /* -- Width From Generic Images -- */
+    img{
+        width: 100px;
+    }
+
+    .header{
+        width: $width;
+        padding: 20px 50px;
+        background-color: $void;
+        display: $flexItem;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+    
+        &__icon{
+            cursor: pointer;
+            display: inline-block;
+
+            .header__button--photo{
+                width: 80px;
+            }
+        }
+    }
+
+    /* -- Lobby Container -- */
+    .main{
+        background-color: #e1e1e1;
+
+        /* -- Banner Container -- */
+        &__banner{
+            width: $width;
+            padding: 40px 0;
+            text-align: center;
+            background-image: url(../img/Pioneer-DJ-banner.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: $white;
+            background-position-y: 45%;
+
+            .main__sectitle--banner{
+                color: $alice;
+                width: $width;
+                font-weight: 600;
+                font-size: 30px;
+                margin: 10px;
+            }
+
+            .main__txtbanner{
+                color: $alice;
+                width: 350px;
+                margin: 0 auto;
+                font-size: 25px;
+            }
+        }
+
+        &__title{
+            color: #000000;
+            width: $width;
+            margin: 1rem;
+            font-weight: 600;
+            font-size: 2rem;
+
+            display: $flexItem;
+            @include genericFlex(center, center, center)
+        }
+
+        /* -- Cards Container -- */
+        &__controllers{
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+
+            /* -- Individual__Card--Modifiers -- */
+            .main__card{
+                background-color: #999;
+                border-radius: 1rem;
+                overflow: hidden;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                
+                .main__product--photo{
+                    display: $flexItem;
+                    margin: .5rem;
+                    @include genericFlex(center, center, center)
+                }
+            }
+        
+            .main__card:hover{
+                transform: translateY(-10px);
+            }
+
+            .main__crd-content{
+                padding: 10px;
+                display: $flexItem;
+                @include genericFlex(center, center, center)
+            }
+
+            .main__artcl-name, .main__artcl-desc{
+                color: $void;
+                font-size: .9rem;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    /* -- Footer Container -- */
+    .footer{
+        background-color: #080808;
+        padding: 2rem;
+
+        &__list{
+            color: $white;
+            display: $flexItem;
+            flex-direction: row;
+
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+
+            .footer__item:hover{
+                color: #fb39a0;
+            }
+
+            .footer__link{
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
+        }
+    }
+}
