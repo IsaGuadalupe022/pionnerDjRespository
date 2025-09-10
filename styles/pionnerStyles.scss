@@ -1,8 +1,12 @@
-/* -- Including responsive devices to stylesheet 4.0 -- */
+/* -- Including darker mode on stylesheet 4.5-A by Hct-- */
 /* -- Generic Colors -- */
 $white: #fff;
 $alice: #81ffff;
 $void: #333;
+
+/* -- Dark Color prefers -- */
+$cat: #222222;
+$marinette: #010010;
 
 /* -- Generic Boxes -- */
 $flexItem: flex;
@@ -177,6 +181,25 @@ $width: 100%;
         .footer__list{
             flex-direction: column;
             margin: 0;
+        }
+    }
+
+    /* -- Darker mode -- */
+    @media(prefers-color-scheme: dark){
+        .main{
+            background-color: $cat;
+
+            .main__title{
+                color: $white;
+            }
+
+            .main__card{
+                background-color: $marinette;
+            }
+
+            .main__artcl-name, .main__artcl-desc{
+                color: $alice;
+            }
         }
     }
 }

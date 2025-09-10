@@ -1,5 +1,6 @@
-/* -- Including responsive devices to stylesheet 4.0 -- */
+/* -- Including darker mode on stylesheet 4.5-A by Hct-- */
 /* -- Generic Colors -- */
+/* -- Dark Color prefers -- */
 /* -- Generic Boxes -- */
 /* -- Generic Flex -- */
 /* -- General Reboot -- */
@@ -21,6 +22,7 @@
   /* -- Lobby Container -- */
   /* -- Footer Container -- */
   /* -- Control of mobile devices -- */
+  /* -- Darker mode -- */
 }
 .grid-container img {
   width: 100px;
@@ -147,5 +149,19 @@
   .grid-container .footer__list {
     flex-direction: column;
     margin: 0;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .grid-container .main {
+    background-color: #222222;
+  }
+  .grid-container .main .main__title {
+    color: #fff;
+  }
+  .grid-container .main .main__card {
+    background-color: #010010;
+  }
+  .grid-container .main .main__artcl-name, .grid-container .main .main__artcl-desc {
+    color: #81ffff;
   }
 }/*# sourceMappingURL=pionnerStyles.css.map */
